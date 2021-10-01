@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StatusPanelFormatterComponent } from './status-panel-formatter.component';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('StatusPanelFormatterComponent', () => {
   let component: StatusPanelFormatterComponent;
@@ -8,6 +9,7 @@ describe('StatusPanelFormatterComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ StatusPanelFormatterComponent ],
+      providers: [provideMockStore({})],
     })
       .compileComponents();
   });
@@ -18,7 +20,4 @@ describe('StatusPanelFormatterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

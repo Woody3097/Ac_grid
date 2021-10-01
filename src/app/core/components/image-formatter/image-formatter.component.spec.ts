@@ -16,10 +16,12 @@ describe('ImageFormatterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ImageFormatterComponent);
     component = fixture.componentInstance;
+    component.agInit({ value: 'testValue' });
     fixture.detectChanges();
   });
 
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 });

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderCheckboxComponent } from './header-checkbox.component';
+import {GridApi} from "ag-grid-community";
 
 describe('HeaderCheckboxComponent', () => {
   let component: HeaderCheckboxComponent;
@@ -8,7 +9,7 @@ describe('HeaderCheckboxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderCheckboxComponent ],
+      declarations: [ HeaderCheckboxComponent ]
     })
       .compileComponents();
   });
@@ -16,10 +17,12 @@ describe('HeaderCheckboxComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderCheckboxComponent);
     component = fixture.componentInstance;
+    component.agInit({api: new GridApi()})
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
+  afterEach(() => {
+    fixture.detectChanges();
+  })
 });

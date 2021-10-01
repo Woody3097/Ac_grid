@@ -9,6 +9,6 @@ export class FetchDataService {
   constructor(private http: HttpClient) {}
 
   fetchData(url: string): Observable<any> {
-    return this.http.get<any>(url);
+    return this.http.get(url) as Observable<any>;
   }
 }

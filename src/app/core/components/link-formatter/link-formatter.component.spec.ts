@@ -16,10 +16,12 @@ describe('LinkFormatterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LinkFormatterComponent);
     component = fixture.componentInstance;
+    component.agInit({ value: { videoId: '', title: '' } } );
     fixture.detectChanges();
   });
 
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 });

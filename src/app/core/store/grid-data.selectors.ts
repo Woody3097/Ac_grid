@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { GridDataState } from './grid-data.reducer';
+import { GridDataState } from './models/grid-state.model';
 
 const gridDataFeature = createFeatureSelector<GridDataState>('gridDataReducer');
 

@@ -8,8 +8,10 @@
   [defaultColDef]="defaultColDef"
   [rowSelection]="'multiple'"
   [rowMultiSelectWithClick]="true"
+  [getContextMenuItems]="getContextMenuItems"
   [rowHeight]="70"
   [suppressRowClickSelection]="(selectionType$ | async) ?? true"
   (firstDataRendered)="onFirstDataRendered($event)"
+  (gridReady)="onGridReady($event)"
 >
 </ag-grid-angular>

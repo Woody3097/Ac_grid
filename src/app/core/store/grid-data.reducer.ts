@@ -1,6 +1,4 @@
-export interface GridDataState {
-  selectionType: boolean,
-}
+import { GridDataState } from './models/grid-state.model';
 
 const initialState : GridDataState = {
   selectionType: true,

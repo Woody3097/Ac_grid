@@ -11,7 +11,7 @@ import { StoreModule } from '@ngrx/store';
 import { gridDataReducer } from './core/store/grid-data.reducer';
 import { HeaderCheckboxComponent } from './core/components/header-checkbox/header-checkbox.component';
 import { CheckboxFormatterComponent } from './core/components/checkbox-formatter/checkbox-formatter.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,21 +21,21 @@ import {FormsModule} from "@angular/forms";
     LinkFormatterComponent,
     StatusPanelFormatterComponent,
     HeaderCheckboxComponent,
-    CheckboxFormatterComponent
+    CheckboxFormatterComponent,
   ],
-    imports: [
-        BrowserModule,
-        AgGridModule.withComponents([
-            ImageFormatterComponent,
-            LinkFormatterComponent,
-            StatusPanelFormatterComponent,
-            HeaderCheckboxComponent,
-            CheckboxFormatterComponent
-        ]),
-        HttpClientModule,
-        StoreModule.forRoot({gridDataReducer}),
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AgGridModule.withComponents([
+      ImageFormatterComponent,
+      LinkFormatterComponent,
+      StatusPanelFormatterComponent,
+      HeaderCheckboxComponent,
+      CheckboxFormatterComponent,
+    ]),
+    HttpClientModule,
+    StoreModule.forRoot({ gridDataReducer }),
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
